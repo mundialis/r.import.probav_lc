@@ -1,0 +1,46 @@
+<h2>DESCRIPTION</h2>
+
+<em>r.import.probav_lc</em> is a GRASS Addon that downloads and imports PROBA-V land cover raster maps from <a href="https://zenodo.org/record/3939050">Copernicus Global Land Service: Land Cover 100m: collection 3: epoch 2019: Globe</a> for the current region.
+
+The land cover maps of the years 2015 to 2019 are supported.
+
+To avoid multiple downloads of the data, the user can specify a
+<b>directory</b> where the data should be saved. If no <b>directory</b> is
+ specified, the data will be deleted after the import.
+
+<h2>REQUIREMENTS</h2>
+
+<h3>wget from Python3</h3>
+<div class="code"><pre>
+pip3 install wget
+</pre></div>
+
+<h3>zenodo_get from Python3</h3>
+<div class="code"><pre>
+pip3 install zenodo_get
+</pre></div>
+
+<h2>EXAMPLES</h2>
+
+<h3>Import 100m PROBA-V discrete classification and tree cover fraction map</h3>
+<div class="code"><pre>
+r.import.probav_lc directory=probaV year=2019 \
+  discrete_classification_output=discrete_classification_map \
+  tree_coverfraction_output=tree_coverfraction_map
+</pre></div>
+
+<h2>SEE ALSO</h2>
+
+<em>
+<a href="r.import.html">r.import</a>
+</em>
+
+
+<h2>AUTHORS</h2>
+
+Anika Weinmann, <a href="https://www.mundialis.de/">mundialis GmbH & Co. KG</a>
+
+<!--
+<p>
+<i>Last changed: $Date$</i>
+-->
