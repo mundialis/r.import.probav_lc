@@ -147,7 +147,7 @@ import wget
 
 import grass.script as grass
 from osgeo.gdal import Warp
-from zenodo_get.zget import zenodo_get
+from zenodo_get.zget import cli as zenodo_get
 
 rm_folders = []
 download_dir = None
@@ -305,7 +305,7 @@ def main():
     # request server
     tmp_dir = grass.tempdir()
     rm_folders.append(tmp_dir)
-    zenodo_get(["-r", record, "-w", "urls_%d_%s.txt" % (year, pid), "-o", tmp_dir])
+    zenodo_get(args=["-r", record, "-w", "urls_%d_%s.txt" % (year, pid), "-o", tmp_dir], standalone_mode=False)
 
     # get urls
     with open(os.path.join(tmp_dir, "urls_%d_%s.txt" % (year, pid))) as file:
