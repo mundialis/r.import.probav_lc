@@ -294,7 +294,7 @@ def get_filenames(allfilenames):
 
 def main():
 
-    global rm_folders, download_dir, COMPRESS_OVERVIEW, GDAL_CACHEMAX
+    global download_dir
 
     pid = str(os.getpid())
 
