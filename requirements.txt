@@ -1,2 +1,3 @@
 grass-gis-helpers>=2.5.0
 psutil
+zenodo_get
