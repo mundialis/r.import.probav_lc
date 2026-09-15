@@ -16,7 +16,7 @@ jobs:
       black-version: ''
       pylint-version: ''
       ruff-version: ''
-      super-linter-version: ''
+      SUPER_LINTER_FILTER_REGEX_EXCLUDE: '.*'
     # the workflow requires permissions that need to be granted by the parent job:
     permissions:
       contents: read
